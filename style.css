@@ -1,0 +1,222 @@
+:root {
+    --ff-fraun: "Fraunces", serif;
+    --ff-mont: "Montserrat", sans-serif;
+
+    --fw-fraun: 700;
+    --fw-mont: 500;
+    --fw-mont-bold: 700;
+
+    --fs-prgh: 0.875rem;
+
+    /* primary-color */
+    --clr-Dark-cyan: hsl(158, 36%, 37%);
+    --clr-Cream: hsl(30, 38%, 92%);
+
+    /* Neutral colors */
+    --clr-Very-dark-blue: hsl(212, 21%, 14%);
+    --clr-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-mont);
+    background: var(--clr-Cream);
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    background: var(--clr-White);
+    max-width: 23.2em;
+    /* width: 90%; */
+    margin: 2em auto;
+    padding: 0;
+    border-radius: 0.625em;
+    overflow: hidden;
+}
+
+.main-content {
+    padding: 0 1.625em 1.625em;
+}
+
+.main-img {
+    display: flex;
+}
+
+.main-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.main-content h1 {
+    font-size: 0.725rem;
+    letter-spacing: 0.45em;
+    color: var(--clr-Dark-grayish-blue);
+    font-weight: var(--fw-mont-bold);
+    text-transform: uppercase;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    line-height: 1em;
+    font-family: var(--ff-fraun);
+    font-weight: var(--fw-fraun);
+}
+
+.main-content p {
+    font-size: var(--fs-prgh);
+    font-weight: var(--fw-mont-bold);
+    line-height: 1.75em;
+    color: var(--clr-Dark-grayish-blue);
+    margin-bottom: 1.5em;
+}
+
+span.price1 {
+    font-family: var(--ff-fraun);
+    font-weight: var(--fw-fraun);
+    font-size: 2rem;
+    color: var(--clr-Dark-cyan);
+    padding-right: 0.875em;
+    margin-top: 1.5em;
+}
+
+span.price {
+    font-size: 0.875rem;
+}
+
+.price {
+    color: var(--clr-Dark-grayish-blue);
+    font-weight: var(--fw-mont-bold);
+    text-decoration: line-through;
+}
+
+button {
+    color: var(--clr-White);
+    font-size: 1rem;
+    font-weight: var(--fw-mont-bold);
+    background: var(--clr-Dark-cyan);
+    border: none;
+    border-radius: 0.5em;
+    width: 100%;
+    margin: 1em 0 0 0;
+}
+
+button:hover {
+    color: var(--clr-White);
+    background: var(--clr-Very-dark-blue);
+}
+
+button:active {
+    color: var(--clr-White);
+    background: var(--clr-Very-dark-blue);
+}
+
+.cart-btn {
+    text-align: center;
+    margin: 0.25em 0;
+    
+}
+
+.cart-btn .btn {
+    padding: 1.25em 2em;
+}
+
+.cart-btn .fa-solid {
+    padding-right: 0.75em;
+}
+
+/* ==== Medium size Devices ==== */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        max-width: 43.75em;
+        margin: 6em auto;
+        overflow: hidden;
+    }
+
+    .main-img .mobile-img {
+        display: none;
+    }
+
+    .main-img {
+        flex: 1;
+    }
+
+    .main-img .desktop-img {
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    .main-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .main-content p {
+        font-size: 1.125rem;
+    }
+
+    .main-content {
+        padding: 1.875em;
+        flex: 1;
+    }
+
+    span.price1 {
+        font-size: 2.6rem;
+    }
+
+    span.price {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* ==== LARGE SCREEN DEVICES ==== */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 50em;
+        margin: 8em auto;
+    }
+
+    .main-content h1 {
+        font-size: 1rem;
+    }
+    
+        .main-content h2 {
+            font-size: 3.2rem;
+        }
+    
+        .main-content p {
+            font-size: 1.325rem;
+        }
+    
+        .main-content {
+            padding: 2em;
+        }
+    
+        span.price1 {
+            font-size: 3rem;
+        }
+    
+        span.price {
+            font-size: 1.25rem;
+        }
+
+        button.btn {
+            font-size: 1.375rem;
+            margin-top: 1.75em;
+        }
+}
